@@ -42,7 +42,7 @@ def login():
 def preprocess(image_path):
     img = image.load_img(image_path, target_size=(96,96))
     img_array = image.img_to_array(img)
-    image = img_array/255.0
+    img_array = img_array/255.0
     img_array = np.expand_dims(img_array, axis=0)
     return img_array
 
@@ -52,27 +52,28 @@ def predict():
         uploaded_file = request.files['file']
         file_path = 'static/assests/temp.jpg'
         uploaded_file.save(file_path)
-        # preprocessed_image = preprocess(file_path)
+        preprocessed_image = preprocess(file_path)
         print(uploaded_file)
-        # prediction = model.predict(preprocessed_image)
-        # predicted_label = np.round(prediction.flatten()).astype('int')
+        prediction = model.predict(preprocessed_image)
+        predicted_label = np.round(prediction.flatten()).astype('int')
         # Remove the temporary file
         os.remove(file_path)
-        # return jsonify({'prediction': predicted_label[0]})
-        prediction = "yes it is a cancer"
-        return jsonify({'prediction': prediction})
+        print(predicted_label[0])
+        return jsonify({'prediction': predicted_label[0]})
     else:
         return render_template('Predict.html')
 
-@app.route('/chat', methods=['POST'])
+@app.route('/chat', methods=['GET','POST'])
 def chat():
-    user_message = request.form.get('message') 
-    if not user_message:
-        return jsonify({"response": "Please provide a question."})
-    bot = ChatBot()
-    result = bot.ask(user_message)
-    return jsonify({"response": result})
-
+    if request.method == 'POST':
+        user_message = request.form.get('message') 
+        if not user_message:
+            return jsonify({"response": "Please provide a question."})
+        bot = ChatBot()
+        result = bot.ask(user_message)
+        return jsonify({"response": result})
+    else:
+        return render_template('chatbot.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
