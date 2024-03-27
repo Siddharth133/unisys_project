@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="../static/index.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
       rel="stylesheet"
@@ -27,10 +28,10 @@
       <div class="right">
         <ul id="nav">
           <li><a href="#" target="_blank">Home</a></li>
-          <li><a href="#" target="_blank">About</a></li>
           <li><a href="{{url_for('predict')}}">Predict</a></li>
-          <li><a href="{{ url_for('login') }}">Login</a></li>
           <li><a href="{{ url_for('chat') }}">Chat</a></li>
+          <li><a href="{{ url_for('login') }}">Login</a></li>
+          <li><a href="payment.html" target="_blank">Pricing</a></li>
         </ul>
       </div>
     </header>
@@ -39,10 +40,10 @@
       <div class="hero-section-text">
         <h1>Revolutionizing NHL Detection with Quantum Machine Learning</h1>
         <h3 class="text-font">
-          Welcome to our groundbreaking platform utilizing Quantum Machine
+          Welcome to our platform utilizing Quantum Machine
           Learning (QML) for the precise detection of Non-Hodgkin Lymphoma (NHL)
-          through histopathological images.
-          <p class="text-font">Upload your scans now!</p>
+          through histopathological images.<br>
+          <a href="predict.html" class="text-font upload-link">Upload your scans now!</a>
         </h3>
       </div>
       <div class="hero-section-img">
@@ -55,22 +56,13 @@
       <div class="grid-item">
         <p class="feat-text-heading">Who Are We?</p>
         <p class="text-font">
-          We are a team of passionate students dedicated to advancing the field
-          of cancer detection. With expertise in Quantum Machine Learning (QML)
-          and a commitment to improving patient outcomes, we're pioneering a new
-          era in medical diagnostics.
+          We are a passionate team of students and Ml enthusiasts dedicated to improving patient outcomes through AI-powered innovation.  Our mission is to revolutionize NHL diagnosis by providing pathologists with a powerful and reliable tool.  
         </p>
       </div>
       <div class="grid-item">
         <p class="feat-text-heading">What We Do?</p>
         <p class="text-font">
-          Through meticulous dataset segmentation and feature extraction, we
-          harness the power of Quantum Machine Learning (QML) to enhance
-          diagnostic accuracy.Our approach combines state-of-the-art techniques
-          in data annotation, deep learning, and quantum computing to achieve
-          groundbreaking results in cancer detection. With a focus on continuous
-          improvement and rigorous testing, we ensure that our methods remain at
-          the forefront of innovation.
+          Traditional NHL diagnosis can be subjective and time-consuming. We address these challenges by providing a powerful and efficient solution.  Leveraging Quantum Machine Learning technology, our model analyzes histopathological images with reliable accuracy, offering pathologists a valuable second opinion.  This leads to earlier detection of NHL, allowing for better treatment options and improved patient outcomes.  The platform seamlessly integrates into existing workflows, streamlining the diagnostic process and empowering pathologists to focus on patient care.
         </p>
       </div>
       <img src="../static/assests/img2.jpg" alt="" class="grid-item" />
@@ -82,20 +74,22 @@
         <p class="text-font">
           Early detection of Non-Hodgkin Lymphoma is crucial as it significantly
           improves patient outcomes and survival rates. When detected at an
-          early stage, the 5-year survival rate for NHL is around 73% globally
-          and 80% in India, compared to only 57% and 40% respectively when
+          early stage, the <b>5-year survival rate</b>  for NHL is around 73% globally
+          and <b>80% in India</b> , compared to only 57% and 40% respectively when
           diagnosed at an advanced stage. Early-stage NHL is more treatable,
           with patients having a higher chance of achieving complete remission
           and better long-term progression-free survival. Moreover, early
           detection reduces the economic burden on patients, families, and
           healthcare systems, as treatment costs for advanced NHL can be up to
           three times higher than early-stage disease in India. With NHL being
-          the 7th most common cancer globally and accounting for 2.2% of all
+          the <b>7th most common cancer</b>  globally and accounting for 2.2% of all
           cancers in India, effective early detection methods like our Quantum
           Machine Learning approach can potentially save countless lives and
           improve overall NHL management.
         </p>
-        <button>Subscribe to our emails to learn more about NHL</button>
+        <button>
+          <a href="chatbot.html">Learn more about NHL &rarr;</a>
+          </button>
       </div>
       <img src="../static/assests/sec3.png" alt="" />
     </div>
@@ -103,10 +97,10 @@
     <div class="section-4">
       <div class="section-4-heading">> 1 million</div>
       <img src="../static/assests/lung.jpg" alt="" />
-      <div class="section-4-heading">~ 90%</div>
+      <div class="section-4-heading">~ 85%</div>
       <div class="section-4-text">cases per year in India</div>
       <div class="section-4-text">
-        Non-Hodgkin's lymphoma is a cancer that starts in the lymphatic system.
+        NHL disrupts the body's natural defense system by attacking the lymphatic system.
       </div>
       <div class="section-4-text">accuracy of our model</div>
     </div>
@@ -123,5 +117,46 @@
       Tech Stack Used:
       <img src="../static/assests/techstack.jpg" alt="" />
     </div>
+
+    <section class="footer">
+      <div class="footer-row">
+        <div class="footer-col">
+          <h4>Info</h4>
+          <ul class="links">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Customers</a></li>
+            <li><a href="#">Service</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul class="links">
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Newsletter</h4>
+          <p>
+            Subscribe to our newsletter for a weekly dose
+            of news, updates, and
+            exclusive offers.
+          </p>
+          <form action="#">
+            <input type="text" placeholder="Your email" required>
+            <button type="submit">SUBSCRIBE</button>
+          </form>
+          <div class="icons">
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-linkedin"></i>
+            <i class="fa-brands fa-github"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </body>
 </html>

@@ -132,10 +132,6 @@ a {
   color: #373737;
   font-weight: 600;
 }
-.hero-section-text h3 p:hover {
-  text-decoration: underline;
-  cursor: pointer;
-}
 
 .hero-section-img {
   width: 40%;
@@ -149,6 +145,10 @@ a {
   max-height: 600px;
   width: auto;
   height: auto;
+}
+
+.upload-link:hover {
+  text-decoration: underline;
 }
 
 .feat {
@@ -324,7 +324,7 @@ a {
 .section-4-text {
   text-align: center;
   padding: 10px 40px;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .section-5 {
@@ -332,4 +332,107 @@ a {
   font-weight: 500;
   text-align: center;
   padding: 100px;
+}
+
+.footer {
+  background: #10182f;
+  font-weight: 600;
+}
+
+.footer .footer-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 3.5rem;
+  padding: 60px;
+}
+
+.footer-row .footer-col h4 {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.footer-col .links {
+  margin-top: 20px;
+}
+
+.footer-col .links li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+.footer-col .links li a {
+  text-decoration: none;
+  font-size: 0.85em;
+  color: #bfbfbf;
+}
+
+.footer-col .links li a:hover {
+  color: #fff;
+}
+
+.footer-col p {
+  margin: 20px 0;
+  font-size: 0.85em;
+  color: #bfbfbf;
+  max-width: 300px;
+}
+
+.footer-col form {
+  display: flex;
+  gap: 5px;
+}
+
+.footer-col input {
+  font-size: 0.85em;
+  height: 40px;
+  border-radius: 6px;
+  background: none;
+  width: 100%;
+  outline: none;
+  border: 1px solid #7489c6;
+  caret-color: #fff;
+  color: #fff;
+  padding-left: 10px;
+}
+
+.footer-col input::placeholder {
+  color: #ccc;
+}
+
+.footer-col form button {
+  background: #fff;
+  outline: none;
+  border: none;
+  padding: 7px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: 0.2s ease;
+  margin-left: 20px;
+  font-size: 0.75em;
+}
+
+.footer-col form button:hover {
+  background: #cecccc;
+}
+
+.footer-col .icons {
+  display: flex;
+  margin-top: 30px;
+  gap: 30px;
+  cursor: pointer;
+}
+
+.footer-col .icons i {
+  color: #afb6c7;
+}
+
+.footer-col .icons i:hover {
+  color: #fff;
+}
+
+.section-3-text p span {
+  font-style: bold;
 }

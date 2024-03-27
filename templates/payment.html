@@ -6,8 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Account</title>
 
-    <link rel="stylesheet" href="../static/login.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link rel="stylesheet" href="../static/payment.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -34,69 +37,48 @@
           <li><a href="chatbot.html" target="_blank">Chat</a></li>
           <li><a href="login.html" target="_blank">Login</a></li>
           <li><a href="payment.html" target="_blank">Pricing</a></li>
-
         </ul>
       </div>
     </header>
 
     <div class="main">
-      <!-- Log in box -->
-      <div class="box">
-        <form action="/login" method="POST">
-          <div class="left1">
-            <img src="../static/assests/acc.png" />
-            <div class="div1">
-              <input
-                type="text"
-                name="username"
-                placeholder="Username/Email"
-                required
-              />
-              <input
-                type="password"
-                name="password"
-                placeholder="Password"
-                required
-              />
-            </div>
-            <div class="div2">
-              <input type="checkbox" class="rem" />Remember Me
-              <button type="submit" class="btn">Login</button>
-            </div>
-          </div>
-          <div class="right1">
-            <img src="../static/assests/login.png" />
-          </div>
-        </form>
-      </div>
-
-      <!-- Sign in box -->
-      <div class="box1">
-        <div class="left2">
-          <img src="../static/assests/signin.png" />
+      <div class="box box-1">
+        <div>
+          <h3>Basic</h3>
+          <h1>$5 <span> /scan</span></h1>
+          <li>One scan at a time</li>
+          <li>Instant results</li>
+          <li>Basic customer support</li>
+          <li>Pay-as-you-go option</li>
+          <button>Get Started &rarr;</button>
         </div>
+      </div>
+      <div class="box box-2">
+        <div>
+          <h3>Premium</h3>
+          <h1>$19.99 <span> /month</span></h1>
+          <li>Unlimited scan</li>
+          <li>Priority support</li>
+          <li>Advanced features</li>
+          <li>Flexible subscription options</li>
 
-        <div class="right2">
-          <img src="../static/assests/acc.png" />
-
-          <div class="div3">
-            <input type="text" placeholder="Name" required />
-            <input type="text" placeholder="Email" required />
-            <input type="number" placeholder="Phone Number" required />
-            <input type="number" placeholder="Age" required />
-            <input type="password" placeholder="New Password" required />
-            <input type="password" placeholder="Retype Password" required />
-          </div>
-          <div>
-            <input type="checkbox" class="tnc" />Agree to terms and
-            conditions<sup>*</sup>
-            <button class="btn">Sign up</button>
-          </div>
+          <button>Get Started &rarr;</button>
         </div>
       </div>
 
-      <div class="sign">Click here to Sign in instead &#8594;</div>
-      <div class="login1">Click here to Log in instead &#8594;</div>
+      <div class="box box-3">
+        <div>
+          <h3>Enterprise</h3>
+          <h1>Custom Pricing</h1>
+          <li>Tailored solutions</li>
+          <li>Personalized support</li>
+          <li>Dedicated account manager</li>
+          <li>Custom integrations</li>
+          <li>Scalable infrastructure</li>
+
+          <button>Get Started &rarr;</button>
+        </div>
+      </div>
     </div>
     <section class="footer">
       <div class="footer-row">
@@ -120,12 +102,11 @@
         <div class="footer-col">
           <h4>Newsletter</h4>
           <p>
-            Subscribe to our newsletter for a weekly dose
-            of news, updates, and
+            Subscribe to our newsletter for a weekly dose of news, updates, and
             exclusive offers.
           </p>
           <form action="#">
-            <input type="text" placeholder="Your email" required>
+            <input type="text" placeholder="Your email" required />
             <button type="submit">SUBSCRIBE</button>
           </form>
           <div class="icons">
@@ -137,6 +118,5 @@
         </div>
       </div>
     </section>
-    <script src="../static/login.js"></script>
   </body>
 </html>
