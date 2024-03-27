@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // Submit form when button is clicked
+            $('#submitBtn').on('click', function(){
+                $('#prediction').empty(); // Clear previous prediction
+                var formData = new FormData($('form')[0]);
+                $.ajax({
+                    type: 'POST',
+                    url: '/predict',
+                    data: formData,
+                    contentType: false,
+                    processData: false,
+                    success: function(response){
+                        $('#prediction').text(response.prediction);
+                    },
+                    error: function(error){
+                        console.log(error);
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <form enctype="multipart/form-data">
+        <input type="file" name="file" id="file">
+        <button type="button" id="submitBtn">Submit</button>
+    </form>
+    <div>
+        <p>Prediction:</p>
+        <p id="prediction"></p>
+    </div>
+</body>
+</html>
+    

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+    <script>
+        function submitQuestion(event) {
+            event.preventDefault(); 
+            var formData = new FormData(document.getElementById("chatForm"));
+            fetch('/chat', {
+                method: 'POST',
+                body: formData
+            }).then(response => response.json())
+              .then(data => {
+                  document.getElementById("chatResponse").innerText = data.response;
+              }).catch(error => console.error('Error:', error));
+        }
+    </script>
+</head>
+<body>
+    <h1>Medical Field Chatbot</h1>
+    <form id="chatForm" onsubmit="submitQuestion(event)">
+        <label for="message">Ask me anything about the medical field:</label><br>
+        <input type="text" id="message" name="message" required><br>
+        <input type="submit" value="Ask">
+    </form>
+    <p id="chatResponse"></p>
+</body>
+</html>
