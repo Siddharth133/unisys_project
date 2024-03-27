@@ -1,0 +1,428 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Baloo Paaji 2", cursive;
+    margin: 0;
+    padding: 0;
+    color: white;
+  }
+  
+  /* Navigation Bar styling */
+  header {
+    font-weight: 700;
+    padding-top: 5px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+  }
+  
+  .left {
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    left: 40px;
+    font-size: 35px;
+    text-shadow: 3px 3px 1px #817e7e;
+    font-family: "Courgette", cursive;
+  }
+  
+  .left a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .mid {
+    display: block;
+    width: 500px;
+    margin: auto;
+    text-align: center;
+    padding: 1px;
+  }
+  
+  .mid ul {
+    list-style: none;
+  }
+  .mid a {
+    color: white;
+    text-decoration: none;
+  }
+  .mid .active {
+    color: grey;
+  }
+  .mid ul li {
+    display: inline;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  
+  .mid ul li:hover {
+    color: grey;
+    text-decoration: underline;
+  }
+  
+  .right {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 17px;
+    align-self: center;
+    border: 0px;
+  }
+  
+  .right input {
+    background-color: #efefef;
+    border: 0px;
+    border-radius: 20px;
+    padding: 5px;
+    width: 80%;
+    border-right: 3px rgba(128, 128, 128, 0.75) solid;
+    border-bottom: 3px rgba(128, 128, 128, 0.75) solid;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    padding-left: 12px;
+  }
+  
+  @media only screen and (max-width: 850px) {
+    header {
+      width: 100%;
+    }
+    .left {
+      width: 99%;
+      text-align: center;
+      margin-left: -38px;
+    }
+    .mid {
+      width: 95%;
+      margin-top: 3em;
+      margin-right: 40px;
+    }
+    .right {
+      width: 100%;
+      margin-top: 5.9em;
+      text-align: center;
+      background-color: black;
+      padding-bottom: 8px;
+    }
+    .right input {
+      width: 32%;
+    }
+  }
+  
+  @media only screen and (max-width: 420px) {
+    .mid {
+      width: 80%;
+      margin-left: 20px;
+    }
+    .right {
+      margin-top: 7.2em;
+      padding: 5px;
+    }
+    .right input {
+      width: 50%;
+    }
+  }
+  @media only screen and (max-width: 290px) {
+    .right {
+      display: none;
+    }
+  }
+  
+  /* Footer styling */
+  footer {
+    background-color: rgb(16, 16, 85);
+    color: white;
+    text-align: center;
+    padding: 30px;
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    padding-top: 40px;
+    margin-top: 1px;
+  }
+  
+  .ig {
+    border-radius: 50%;
+  }
+  .yt {
+    width: 90px;
+    padding-bottom: 2px;
+  }
+  
+  footer img {
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 80px;
+    margin-top: 20px;
+  }
+  footer img:hover {
+    opacity: 0.7;
+  }
+  footer p {
+    padding-top: 25px;
+  }
+  footer p a {
+    color: white;
+    text-decoration: none;
+  }
+  footer p a:hover {
+    color: rgb(162, 214, 232);
+    text-decoration: underline;
+  }
+  
+  footer p a:active {
+    color: #e1ecf3;
+  }
+  
+  @media only screen and (max-width: 410px) {
+    footer img {
+      display: block;
+      margin: auto;
+      margin-top: 20px;
+    }
+  }
+  
+  /* main body styling */
+  .box,
+  .box1 {
+    width: 900px;
+    height: 600px;
+    margin: auto;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    color: black;
+  }
+  .box1 {
+    display: none;
+  }
+  
+  .box .left1 {
+    width: 50%;
+    display: inline;
+    float: left;
+    font-family: "Ubuntu", sans-serif;
+    text-align: center;
+  }
+  .box .right1 {
+    width: 50%;
+    display: inline;
+    float: right;
+  }
+  .box1 .left2 {
+    width: 50%;
+    display: inline;
+    float: left;
+  }
+  .box1 .right2 {
+    width: 50%;
+    display: inline;
+    float: right;
+    font-family: "Ubuntu", sans-serif;
+    text-align: center;
+  }
+  
+  .right1 img {
+    width: 430px;
+    height: 500px;
+    margin-top: 40px;
+  }
+  .left2 img {
+    width: 430px;
+    height: 500px;
+    margin-top: 40px;
+  }
+  
+  .div1 input {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+    height: 30px;
+    width: 65%;
+    margin-top: 20px;
+    border-radius: 4px;
+    border-color: #cccaca;
+    padding: 15px;
+  }
+  
+  .left1 img {
+    width: 15%;
+    display: block;
+    margin: auto;
+    margin-top: 70px;
+  }
+  
+  .right2 img {
+    width: 15%;
+    display: block;
+    margin: auto;
+    margin-top: 70px;
+  }
+  
+  .rem {
+    margin-top: 35px;
+    margin-right: 8px;
+  }
+  .btn {
+    font-size: 17px;
+    padding: 5px 15px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(21, 150, 60);
+    color: white;
+    margin-left: 20%;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+  }
+  
+  .btn:hover {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+  .btn:active {
+    opacity: 0.9;
+  }
+  
+  hr {
+    width: 90%;
+    margin-top: 35px;
+    background-color: #817e7e;
+    border: 1px solid grey;
+    margin-bottom: 40px;
+  }
+  
+  .login button {
+    display: block;
+    width: 230px;
+    height: 45px;
+    margin: auto;
+    margin-top: 30px;
+    font-size: 18px;
+    border: none;
+    color: white;
+    font-family: ubuntu, arial;
+    border-radius: 5px;
+  }
+  .login a {
+    text-decoration: none;
+  }
+  .login button:hover {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+  .login button:active {
+    opacity: 0.9;
+  }
+  
+  .login button i {
+    margin-right: 15px;
+    color: white;
+    font-size: 20px;
+  }
+  
+  .login .fb {
+    background-color: rgb(46, 46, 189);
+  }
+  .login .g {
+    background-color: rgb(188, 24, 24);
+  }
+  .login .tw {
+    background-color: rgb(57, 149, 242);
+  }
+  
+  @media only screen and (max-width: 900px) {
+    .box,
+    .box1 {
+      width: 90%;
+    }
+    .right1 img,
+    .left2 img {
+      width: 100%;
+      height: 100%;
+      margin-top: 170px;
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    .left1,
+    .right2 {
+      width: 100%;
+      float: none !important;
+    }
+  
+    .right1 img,
+    .left2 img {
+      display: none;
+    }
+  
+    .left1 img,
+    .right2 img {
+      padding-top: 30px;
+      width: 50px;
+    }
+  
+    .login button {
+      width: 60%;
+      padding: 10px;
+      height: 10%;
+      font-size: 17px;
+    }
+    .box .div2 {
+      line-height: 35px;
+    }
+  
+    hr {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+  }
+  
+  .sign,
+  .login1 {
+    color: rgb(17, 17, 108);
+    text-align: center;
+    margin-top: -40px;
+    margin-bottom: 60px;
+    font-size: 22px;
+    font-weight: bold;
+  }
+  .sign:hover,
+  .login1:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  
+  .login1 {
+    display: none;
+  }
+  
+  .div3 input {
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+    height: 30px;
+    width: 65%;
+    border-radius: 4px;
+    border-color: #cccaca;
+    padding: 15px;
+  }
+  
+  .tnc {
+    margin-top: 30px;
+    margin-right: 10px;
+  }
+  
+  .right2 button {
+    display: block;
+    margin: auto;
+    margin-top: 25px;
+  }
+  
+  @media only screen and (max-width: 250px) {
+    .box {
+      height: 720px;
+    }
+  }
+  
