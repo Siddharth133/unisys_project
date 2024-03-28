@@ -7,11 +7,15 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
       rel="stylesheet"
-    /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
       rel="stylesheet"
-    /> 
+    />
     <title>Chatbot</title>
     <script>
       function submitQuestion(event) {
@@ -44,20 +48,19 @@
           <li><a href="chatbot.html" target="_blank">Chat</a></li>
           <li><a href="login.html" target="_blank">Login</a></li>
           <li><a href="payment.html" target="_blank">Pricing</a></li>
-
         </ul>
       </div>
     </header>
     <div id="main">
-      <h1 class="heading">Medical Field Chatbot</h1>
+      <h1 class="heading">Medical Chatbot</h1>
       <form id="chatForm" onsubmit="submitQuestion(event)">
-        <label for="message" class="subtext">Ask me anything about the medical field:</label
-        >
+        <label for="message" class="subtext">Ask your medical queries:</label>
         <input type="text" id="message" name="message" required />
-        <input type="submit" value="Ask" id="btn"/>
+        <input type="submit" value="Ask" id="btn" />
       </form>
       <div id="chatResponse"></div>
-    </div><section class="footer">
+    </div>
+    <section class="footer">
       <div class="footer-row">
         <div class="footer-col">
           <h4>Info</h4>
@@ -79,12 +82,11 @@
         <div class="footer-col">
           <h4>Newsletter</h4>
           <p>
-            Subscribe to our newsletter for a weekly dose
-            of news, updates, and
+            Subscribe to our newsletter for a weekly dose of news, updates, and
             exclusive offers.
           </p>
           <form action="#">
-            <input type="text" placeholder="Your email" required>
+            <input type="text" placeholder="Your email" required />
             <button id="subscribe" type="submit">SUBSCRIBE</button>
           </form>
           <div class="icons">

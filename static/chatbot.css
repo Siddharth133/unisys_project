@@ -172,7 +172,11 @@ a {
 #chatResponse {
   text-align: center;
   font-weight: 500;
-  padding-top: 60px;
+  padding: 40px 60px;
+  border-radius: 10px;
+  text-align: justify;
+  font-weight: 700;
+  font-family: "Nunito", sans-serif;
 }
 
 .footer {
