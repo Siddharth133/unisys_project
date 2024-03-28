@@ -4,7 +4,6 @@ import numpy as np
 import os
 import tensorflow as tf
 from tensorflow.keras.preprocessing import image
-from transformers import GPT2LMHeadModel, GPT2Tokenizer
 import re
 from chatbot_testing import ChatBot
 
