@@ -15,7 +15,7 @@
     />
     <title>Prediction</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script>
+    <!-- <script>
       $(document).ready(function () {
         // Submit form when button is clicked
         $("#submitBtn").on("click", function () {
@@ -36,6 +36,35 @@
           });
         });
       });
+    </script> -->
+    <script>
+      $(document).ready(function () {
+        // Submit form when button is clicked
+        $("#submitBtn").on("click", function () {
+          $("#prediction").empty(); // Clear previous prediction
+          var formData = new FormData($("form")[0]);
+          $.ajax({
+            type: "POST",
+            url: "/predict",
+            data: formData,
+            contentType: false,
+            processData: false,
+            success: function (response) {
+              if (response.prediction == 0) {
+                $("#prediction").text("The given sample is not cancerous");
+              }
+              else
+              {
+                $("#prediction").text("The given sample is cancerous");
+
+              }
+            },
+            error: function (error) {
+              console.log(error);
+            },
+          });
+        });
+      });
     </script>
   </head>
   <body>
@@ -48,11 +77,11 @@
       </div>
       <div class="right-nav">
         <ul id="nav">
-          <li><a href="index.html" target="_blank">Home</a></li>
-          <li><a href="predict.html" target="_blank">Predict</a></li>
-          <li><a href="chatbot.html" target="_blank">Chat</a></li>
-          <li><a href="login.html" target="_blank">Login</a></li>
-          <li><a href="payment.html" target="_blank">Pricing</a></li>
+          <li><a href="{{url_for('index')}}">Home</a></li>
+          <li><a href="{{url_for('predict')}}">Predict</a></li>
+          <li><a href="{{ url_for('chat') }}">Chat</a></li>
+          <li><a href="{{ url_for('login') }}">Login</a></li>
+          <li><a href="{{url_for('payment')}}">Pricing</a></li>
 
         </ul>
       </div>

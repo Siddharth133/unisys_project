@@ -27,11 +27,11 @@
       </div>
       <div class="right">
         <ul id="nav">
-          <li><a href="#" target="_blank">Home</a></li>
+          <li><a href="{{url_for('index')}}">Home</a></li>
           <li><a href="{{url_for('predict')}}">Predict</a></li>
           <li><a href="{{ url_for('chat') }}">Chat</a></li>
           <li><a href="{{ url_for('login') }}">Login</a></li>
-          <li><a href="payment.html" target="_blank">Pricing</a></li>
+          <li><a href="{{url_for('payment')}}">Pricing</a></li>
         </ul>
       </div>
     </header>
@@ -43,7 +43,7 @@
           Welcome to our platform utilizing Quantum Machine
           Learning (QML) for the precise detection of Non-Hodgkin Lymphoma (NHL)
           through histopathological images.<br>
-          <a href="predict.html" class="text-font upload-link">Upload your scans now!</a>
+          <a href="predict" class="text-font upload-link">Upload your scans now!</a>
         </h3>
       </div>
       <div class="hero-section-img">
@@ -88,7 +88,7 @@
           improve overall NHL management.
         </p>
         <button>
-          <a href="chatbot.html">Learn more about NHL &rarr;</a>
+          <a href="{{url_for('chat')}}">Learn more about NHL &rarr;</a>
           </button>
       </div>
       <img src="../static/assests/sec3.jpg" alt="" />

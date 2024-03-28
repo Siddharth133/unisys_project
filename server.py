@@ -11,8 +11,8 @@ app = Flask(__name__)
 app.secret_key = 'akwged19823ybda239ihd'
 
 model = tf.keras.models.load_model("model/cancer_model1.h5")
-
 @app.route('/')
+# @app.route('/index')
 def index():
     return render_template('index.html')
 
@@ -58,7 +58,8 @@ def predict():
         # Remove the temporary file
         os.remove(file_path)
         print(predicted_label[0])
-        return jsonify({'prediction': predicted_label[0]})
+        # Convert numpy.int32 or numpy.int64 to Python native int before returning
+        return jsonify({'prediction': int(predicted_label[0])})
     else:
         return render_template('Predict.html')
 
@@ -73,6 +74,8 @@ def chat():
         return jsonify({"response": result})
     else:
         return render_template('chatbot.html')
-
+@app.route('/payment', methods=['GET'])
+def payment():
+    return render_template('payment.html')
 if __name__ == '__main__':
     app.run(debug=True)
