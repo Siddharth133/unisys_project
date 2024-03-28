@@ -51,10 +51,11 @@ pipeline = (
 class ChatBot:
     def ask(self, question):
         result = pipeline.invoke({"question": question})
-        return result
+        result_without_paragraph = result.split("healthcare professional's guidance.")[1]
+        return result_without_paragraph
 
 # Initialize the ChatBot
-bot = ChatBot()
-question = input("Ask me Anything about medical field: ")
-result = bot.ask(question)
-print(result)
+# bot = ChatBot()
+# question = input("Ask me Anything about medical field: ")
+# result = bot.ask(question)
+# print(result)
